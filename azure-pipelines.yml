@@ -11,16 +11,3 @@ pool:
 
 
 steps:
-- task: AzureResourceManagerTemplateDeployment@3
-  inputs:
-    deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: 'OHDevDemoSP'
-    subscriptionId: '0f1a8fff-4fff-43e8-b54c-e63ac7bda305'
-    action: 'Create Or Update Resource Group'
-    resourceGroupName: 'clientdemodevops2-rg'
-    location: 'East US'
-    templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/saabdal/azure-quickstart-templates/master/101-vm-simple-windows/azuredeploy.json'
-    csmParametersFileLink: 'https://raw.githubusercontent.com/saabdal/azure-quickstart-templates/master/101-vm-simple-windows/azuredeploy.parameters.json'
-    deploymentMode: 'Incremental'
-    deploymentName: 'deploywinvm'
